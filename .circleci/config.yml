@@ -35,11 +35,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
-          command: az webapp deployment source show --resource-group sample-dotnet-core --name sample-dotnet-core-application
+          command: az webapp deployment source show --resource-group todoapi --name todoapi-application
       - run:
           name: "Deploy Web App to Azure"
           command: |
-            az webapp deployment source config-local-git --resource-group sample-dotnet-core --name sample-dotnet-core-application
+            az webapp deployment source config-local-git --resource-group todoapi --name todoapi-application
 workflows:
   build-and-deploy:
     jobs:
