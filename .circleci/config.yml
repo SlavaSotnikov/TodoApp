@@ -23,7 +23,7 @@ jobs:
           command: |
             dotnet.exe publish --configuration Release --output WebAPIFolder
       - persist_to_workspace:
-          root: ~/project
+          root: ~/desktop
           paths:
             - WebAPIFolder
   login-to-azure-and-deploy:
